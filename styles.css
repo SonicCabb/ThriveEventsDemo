@@ -1,0 +1,412 @@
+
+:root{
+    --thriveOrange: #dd6a35;
+    --thriveOrangeLight: #ffb795;
+    --thriveOrangeLighter: #fcf1ec;
+
+    --color1: #ddd8d6;
+    --thriveGrey: #6e6e70;
+    --green: rgb(78, 100, 78);
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionHeaderContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 5px 10px 15px 10px;
+}
+
+.topLogo{
+    width: 200px;
+}
+
+
+.regSection{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.regSection h1{
+    font-size: 2em;
+}
+
+.sectionHeader{
+    font-size: 2.0em;
+    color: var(--thriveGrey);
+}
+
+#eventSelector{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+
+.sectionItem{
+    border-radius: 10px;
+    box-shadow: 2px 4px 12px 0px rgba(0,0,0,0.75);
+    overflow: hidden;
+    display: flex;
+    margin: 7px 10px;
+    background-color: white;
+}
+
+
+
+.filterTitle{
+    flex-basis: 40px;
+
+    display: flex;
+    background-color: var(--green);
+    color: white;
+    font-weight: bold;
+
+    padding: 5px 5px 5px 10px;
+
+    align-items: center;
+}
+
+
+.filterList{
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tag{
+    background-color: #ddd8d6;
+    padding: 3px 10px;
+    border-radius: 10px;
+    user-select: none;
+    margin: 5px 0px;
+}
+.selectableTag{
+    
+    filter:opacity(.4);
+    cursor: pointer;
+}
+
+
+.selectedTag{
+    filter:opacity(1);
+}
+
+.selectableTag:hover{
+    filter:opacity(.7);
+}
+
+.dateInfo{
+    background-color: var(--thriveGrey);
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation:mixed;
+    rotate: 180deg;
+    
+    font-weight: bold;
+    padding: 10px 10px 10px 0px;
+
+    flex: 0 0 30px;
+    
+    user-select: none;
+}
+.innerEvent{
+    flex: 1 1;
+    padding: 5px 10px 0px 10px;
+
+    background-color: white;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eventTitle{
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+.eventDescription{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.eventInfoBar{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.eventButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-basis: 100px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    
+
+}
+.eventButton{
+    flex-grow: 1;
+
+    flex-basis: 50%;
+
+}
+.univButton{
+    border: none;
+    color: rgb(255, 255, 255);
+
+    font-size: 1.1rem;
+    text-transform:uppercase;
+    user-select: none;
+    cursor: pointer;
+}
+
+.selectButton{
+    background-color: var(--thriveOrange);
+    width: 100px;
+}
+
+.backButton{
+    background-color: rgb(199, 71, 71);
+}
+
+.infoButton{
+    background-color: var(--green);
+    width: 100px;
+
+}
+
+.univButton:hover{
+    filter:brightness(1.1);
+}
+.univButton:active{
+    filter:brightness(.9);
+}
+.univButton:focus-visible{
+    filter: opacity(.7) ;
+    border-width : 0px;
+}
+
+
+
+.name{
+    max-width: 200px;
+    flex-shrink: 1;
+}
+.ageInput{
+    max-width: 70px;
+}
+.age{
+    max-width: 75%;
+}
+
+
+.submitButton{
+    
+    background-color: var(--thriveOrange);
+}
+
+
+.peopleFormLine{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+    flex: 1 1;
+}
+
+
+.infoClosed{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoClosedItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-grow: 1;
+    margin: 10px 10px 0px 10px;
+}
+
+.infoClosedItem{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.editButton{
+    background-color: var(--thriveOrange);
+    flex: 0 0 100px;
+}
+
+
+
+
+
+
+.infoTitle{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.infoCard{
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: start;
+}
+
+.infoForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+.infoFormItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+.peopleForm{
+    flex-direction: column;
+}
+#peopleFormItems{
+    flex-direction: column;
+}
+
+.infoItem{
+    margin: 5px 10px 5px 10px;
+    font-size: 1.0rem;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    flex: 1 1;
+}
+.infoText{
+    margin-left: 0px;
+    margin-top: 3px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style:solid;
+    border-color: var(--color1);
+}
+.infoText:hover{
+    /* border-color: var(--thriveOrange); */
+    background-color: var(--thriveOrangeLighter);
+
+}
+.infoText:focus-visible
+{
+    outline: 0px;
+    border-color: var(--thriveOrange);
+    background-color: var(--thriveOrangeLighter);
+    box-shadow: 0px 0px 4px 1px var(--thriveOrange);
+}
+
+.waiverText{
+    text-align: left;
+    margin: 10px;
+    line-height: 1.2;
+}
+.waiverTitle{
+    margin: 10px;
+}
+
+.actionButtons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1 1;
+}
+
+.actionButton{
+    background-color: var(--thriveOrange);
+    margin: 5px;
+    border-width: 0px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.email{
+    max-width: 100%;
+    
+}
+.phoneNumber
+{
+    max-width: 130px;
+}
+
+
+.addPersonButton{
+    background-color: var(--thriveGrey);
+}
+.deletePersonButton{
+    background-color: rgb(153, 62, 62);
+    height: 30px;
+}
+
+.closedInfoTwo{
+    font-size: .9rem;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.bold{
+    font-weight: bold;
+
+}
+
+*:required{
+    border-style:solid;
+    border-width: 1px;
+    border-color: var(--thriveOrange);
+}
+
+.reqDone{
+    border-color: var(--green);
+}
+
+@media (min-width: 500px)
+{
+   
+}

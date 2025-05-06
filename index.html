@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriveMaineRegistration</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section id="eventSection" class="regSection">
+        <div class = "sectionHeaderContainer">
+            <img src="maineLogo.png" alt="" class = "topLogo">
+            <h1 class = "sectionHeader">Event Registration</h1>
+        </div>
+        
+        <div class = "eventSelector" id = "eventSelector">
+            <div class = "tagFilter sectionItem">
+                <div class="filterTitle">
+                    Filter:
+                </div>
+                <ul class="filterList">
+                    <li class="tag selectableTag selectedTag">All</li>
+                    <li class="tag selectableTag">Adventure</li>
+                    <li class="tag selectableTag">Retreat</li>
+                    <li class="tag selectableTag">Training</li>
+                    <li class="tag selectableTag">Mission</li>
+                    <li class="tag selectableTag">Other</li>
+                </ul>
+            </div>
+            
+           
+        </div>
+    </section>
+
+    <section id="informationSection" class="regSection">
+        
+        <div class = "peopleInfo sectionItem hidden infoCard" id = "peopleInfo">
+            <div class = "infoClosed hidden">
+                <div class="infoClosedItems">
+                    <h2 class = "infoClosedItem closedInfoOne">Registrants</h2>
+                    <h2 class = "infoClosedItem closedInfoTwo"></h2>
+                </div>
+                <button class = "univButton editButton">Edit</button>
+
+            </div>
+            <h2 class = "infoTitle">Registrant Information</h2>
+            <form action ="" class = "peopleForm infoForm" id = "peopleForm">
+                <div class="infoFormItems" id = "peopleFormItems">
+                    <div class = "peopleFormLine hasIdNum" id = "peopleFormLine0">
+                        <div class="nameInput infoItem hasIdNum" id = "nameInput0">
+                            <label class="nameLabel hasIdNum" for="name0" id = "nameLabel0">Name</label>
+                            <input type="text" id = "name0" name = "name" class = "name infoText hasIdNum" required/>
+                            
+                        </div>
+                        <div class="ageInput infoItem hasIdNum" id = "ageInput0">
+                            <label class="ageLabel hasIdNum" for="age0" id = "ageLabel0">Age</label>
+                            <input type="number" id = "age0" name = "age" class = "age infoText hasIdNum" min="0" max = "120" required/>
+                        </div>
+                        
+                        <div class="relationInput infoItem invisible" id = "relationInput0">
+                            <label class= "relationLabel hasIdNum" for="relation0" id = "relationLabel">Relation</label>
+                            <select name="relation0" id="relation0" class = "relation infoText hasIdNum" required>
+                                <option hidden disabled selected value="default"> -- select -- </option>
+                                <option value = "Spouse">Spouse</option>
+                                <option value = "Parent">Child</option>
+                                <option value = "Friend">Other</option>
+                            </select>
+                        </div>
+                
+                        <button type="button" class = "deletePersonButton actionButton univButton invisible">Delete</button>
+                    </div>
+                </div>
+                <div class = "actionButtons">
+                    <button type="button" class = "addPersonButton actionButton univButton">New Registrant</button>
+                    <button class = "submitButton actionButton univButton">Save & Continue</button>
+                </div>
+            </form>
+           
+        </div>
+
+
+
+        <div class = "contactInfo sectionItem infoCard hidden" id = "contactInfo">
+            <div class = "infoClosed hidden">
+                <div class="infoClosedItems">
+                    <h2 class = "infoClosedItem closedInfoOne" id = "contactClosed0">Contact Info</h2>
+                    <h2 class = "infoClosedItem closedInfoTwo" id = "contactClosed1"></h2>
+                </div>
+                <button class = "univButton editButton">Edit</button>
+
+            </div>
+            <h2 class = "infoTitle">Contact/Other Information</h2>
+            <form action ="" class = "contactForm infoForm" id = "contactForm">
+                <div class = "infoFormItems">
+                    <div class="infoItem">
+                        <label for="email">Email</label>
+                        <input type="email" id = "email" name = "email" class = "email infoText" placeholder="johndoe@gmail.com" required/>
+                    </div>
+                    <div class="infoItem">
+                        <label for="phoneNumber">Phone # (xxx-xxx-xxxx)</label>
+                        <input type="tel" id = "phoneNumber" name = "phoneNumber"
+                        class = "phoneNumber infoText" placeholder="xxx-xxx-xxxx"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                    </div>
+                    <div class="infoItem infoLine">
+                        <label for="allergies">Food Allergies</label>
+                        <input type="text" id = "allergies" name = "allergies" class = "allergies infoText" placeholder="If applicable"/>
+                    </div>
+                    <div class="infoItem infoLine">
+                        <label for="church">Church Name</label>
+                        <input type="text" id = "church" name = "church" class = "church infoText" placeholder="If applicable"/>
+                    </div>
+                </div>
+                <div class = "actionButtons">
+                    <button class = "actionButton univButton" id = "submitContactInfoButton">Save & Continue</button>
+                </div>
+            </form>
+            
+        </div>
+
+        <div class = "emergencyContact sectionItem hidden infoCard" id = "emergencyContact">
+            <div class = "infoClosed hidden">
+                <div class="infoClosedItems">
+                    <h2 class = "infoClosedItem closedInfoOne" id = "emergencyClosed0">Emergency Contact</h2>
+                    <h2 class = "infoClosedItem closedInfoTwo" id = "emergencyClosed1"></h2>
+                </div>
+                <button class = "univButton editButton">Edit</button>
+
+            </div>
+            <h2 class = "infoTitle">Emergency Contact</h2>
+            <form action ="" class = "emergencyForm infoForm" id = "emergencyForm">
+                <div class="infoFormItems">
+                    <div class="infoItem">
+                        <label for="emName">Name</label>
+                        <input type="text" id = "emName" name = "emName" class = "emName infoText" required/>
+                    </div>
+                    <div class="infoItem">
+                        <label for="emRelation">Relation</label>
+                        <select name="emRelation" id="emRelation" class = "emRelation infoText" required>
+                            <option value = "Parent">Parent/Guardian</option>
+                            <option value = "Spouse">Spouse</option>
+                            <option value = "Friend">Friend</option>
+                            <option value = "Family">Family Member</option>
+                            <option value = "Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="infoItem">
+                        <label for="emPhone">Phone # (xxx-xxx-xxxx)</label>
+                        <input type="tel" id = "emPhone" name = "emPhone"
+                        class = "emPhone infoText" placeholder="xxx-xxx-xxxx"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+                    </div>
+                    
+                </div>
+                <div class = "actionButtons">
+                    <button class = "actionButton univButton" id = "submitEmergencyInfoButton">Save & Continue</button>
+                </div>
+                
+            </form>
+
+        </div>
+
+
+        <div class = "waiver sectionItem hidden infoCard" id = "waiver">
+            <div class = "infoClosed hidden">
+                <div class="infoClosedItems">
+                    <h2 class = "infoClosedItem closedInfoOne">Waiver</h2>
+                    <h2 class = "infoClosedItem closedInfoTwo"></h2>
+                </div>
+                <button class = "univButton editButton">Edit</button>
+
+            </div>
+            <h2 class = "infoTitle">Waiver</h2>
+            <h3 class = "waiverTitle">THIS IS A WAIVER AND RELEASE OF LIABILITY. PLEASE READ CAREFULLY.</h3>
+            <p class = "waiverText">
+                As a voluntary participant with Thrive Adventures, I realize that inherent dangers exist. While in good health and able to fully participate in such activities as Backpacking, Camping, Canoeing, Cross Country Skiing, Fishing, Hiking, Rock Climbing, Sea Kayaking, Snowshoeing, Stand Up Paddleboarding, or Whitewater Rafting, I realize my participation may result in illness or injury due to accidents, the forces of nature or other causes unforeseen. Such illness or injury may include but are not limited to disease, strains, burns, sprains, fractures, dislocations, amputations, concussions, hostile wildlife, heat/cold injuries, paralysis and/or death. By participating, I hereby freely and knowingly assume all risk resulting from these activities.
+                <br><br>
+                On behalf of myself, my family, or other personal representatives I hereby agree to release, hold harmless and indemnify Thrive Adventures, its agents, officers and wilderness leaders from any and all claims and lawsuits for bodily injury, property damage, wrongful death, loss of services etc. which may result from my participation in the above mentioned activities, regardless of whether or not these claims or suits arise from negligent acts, omissions by Thrive Adventure leaders or facilitators of the activity, employees or volunteers, another participant, any other person involved or from any other cause. I also agree not to sue or make a claim against the released parties for any injury, loss, harm, or death that occurs or results from the activity.
+                <br><br>
+                Thrive Adventures assume no responsibility for providing medical care during the activity. I agree to pay all costs for any medical care or rescue/evacuation. I also understand that in a wilderness environment qualified medical care, emergency medical evacuation, and definitive medical care may be limited or unavailable during any or all portions of the activity.
+            </p>
+            <h3 class = "waiverTitle">I HAVE READ THE ABOVE WAIVER AND RELEASE. I UNDERSTAND THAT I HAVE RELINQUISHED SUBSTANTIAL RIGHTS BY SIGNING IT AND DO SO VOLUNTARILY.</h3>
+            <form action ="" class = "signatureForm infoForm" id = "signatureForm">
+                <div class="infoFormItems" id = "signatureFormItems">
+                    <div class="infoItem">
+                        <label class = "hasIdNum" for="signature0" id = "signatureLabel0">Signature</label>
+                        <input type="text" id = "signature0" name = "signature" class = "signature hasIdNum infoText" required/>
+                    </div>
+                </div>
+                <div class = "actionButtons">
+                    <button class = "actionButton univButton" id = "submitSignatureInfoButton">Save & Continue</button>
+                </div>
+            </form>
+            
+        </div>
+
+    </section>
+
+
+
+    <script id = "script" src="app.js"></script>
+</body>
+</html>
